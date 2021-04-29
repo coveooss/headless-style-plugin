@@ -20,6 +20,7 @@ export const tailwindConfig: StyleMapping = {
 		'flex flex-row items-center py-1 flex pl-3 text-on-background cursor-pointer ellipsed',
 	'coveo-facet-value-idle': '',
 	'coveo-facet-value-selected': 'font-bold',
+	'coveo-facet-value-checkbox': '',
 	'coveo-facet-value-label-container': 'flex pl-3 text-on-background cursor-pointer ellipsed',
 	'coveo-facet-value-label': 'ellipsed',
 	'coveo-facet-value-count': 'pl-1 text-gray-500',
@@ -47,6 +48,7 @@ export const vaporConfig: StyleMapping = {
 	'coveo-facet-value': 'cursor-pointer facet-value facet-selectable',
 	'coveo-facet-value-idle': '',
 	'coveo-facet-value-selected': '',
+	'coveo-facet-value-checkbox': '',
 	'coveo-facet-value-label-container': 'cursor-pointer inline-flex space-between mod-width-90',
 	'coveo-facet-value-label': '',
 	'coveo-facet-value-count': '',
@@ -60,3 +62,57 @@ export const vaporConfig: StyleMapping = {
 	'coveo-sort-label': '',
 	'coveo-sort-select': 'list-box'
 };
+
+export const bootstrapConfig: StyleMapping = {
+	'coveo-facet-container': 'bg-light mb-3',
+	'coveo-facet-title': 'bg-primary p-2 rounded',
+	'coveo-facet-container-loading': 'bg-light',
+	'coveo-facet-show-more': 'mt-1 btn btn-outline-primary',
+	'coveo-facet-show-more-hidden': 'd-none',
+	'coveo-facet-show-less': 'mt-1 btn btn-outline-primary',
+	'coveo-facet-show-less-hidden': 'd-none',
+	'coveo-facet-value': 'cursor-pointer btn w-100 mt-1',
+	'coveo-facet-value-idle': 'btn-outline-secondary cursor-pointer',
+	'coveo-facet-value-selected': 'btn-secondary cursor-pointer',
+	'coveo-facet-value-checkbox': 'hidden',
+	'coveo-facet-value-label-container': 'cursor-pointer justify-content-between d-flex',
+	'coveo-facet-value-label': '',
+	'coveo-facet-value-count': '',
+	'coveo-search-container': 'input-group position-relative',
+	'coveo-search-button': 'btn btn-primary',
+	'coveo-search-input': 'form-control',
+	'coveo-search-suggestion': 'btn btn-secondary',
+	'coveo-search-suggestions': 'mt-5 clearfix position-absolute bg-light w-100',
+	'coveo-search-suggestions-empty': '',
+	'coveo-sort-container': '',
+	'coveo-sort-label': '',
+	'coveo-sort-select': 'btn btn-outline-secondary dropdown-toggle'
+};
+
+/*
+Empty config
+const bootstrapConfig: StyleMapping = {
+	'coveo-facet-container': '',
+	'coveo-facet-title': '',
+	'coveo-facet-container-loading': '',
+	'coveo-facet-show-more': '',
+	'coveo-facet-show-more-hidden': 'd-none',
+	'coveo-facet-show-less': '',
+	'coveo-facet-show-less-hidden': 'd-none',
+	'coveo-facet-value': '',
+	'coveo-facet-value-idle': '',
+	'coveo-facet-value-selected': '',
+	'coveo-facet-value-label-container': '',
+	'coveo-facet-value-label': '',
+	'coveo-facet-value-count': '',
+	'coveo-search-container': '',
+	'coveo-search-button': '',
+	'coveo-search-input': '',
+	'coveo-search-suggestion': '',
+	'coveo-search-suggestions': '',
+	'coveo-search-suggestions-empty': '',
+	'coveo-sort-container': '',
+	'coveo-sort-label': '',
+	'coveo-sort-select': ''
+};
+*/
