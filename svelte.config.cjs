@@ -1,4 +1,4 @@
-const static = require('@sveltejs/adapter-static');
+const vercel = require('@sveltejs/adapter-vercel');
 const preprocess = require('svelte-preprocess');
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,7 +12,7 @@ module.exports = {
 	],
 
 	kit: {
-		adapter: static(),
+		adapter: vercel(),
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte'
 	}
