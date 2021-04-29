@@ -14,6 +14,7 @@ export interface FacetStyleState extends FacetState {
 export interface FacetValueStyleState extends FacetValue {
 	style: {
 		container: StyleState;
+		checkbox: StyleState;
 		labelContainer: StyleState;
 		valueLabel: StyleState;
 		valueCount: StyleState;
@@ -32,10 +33,10 @@ const createTransform: TransformerFactory<FacetState, FacetStyleState> = ({ mapp
 			class: mapper(Classes.title)
 		},
 		showMore: {
-			class: mapper(Classes.showMore, !state.canShowMoreValues && Classes.showMoreHidden)
+			class: mapper(!state.canShowMoreValues && Classes.showMoreHidden, Classes.showMore)
 		},
 		showLess: {
-			class: mapper(Classes.showLess, !state.canShowLessValues && Classes.showLessHidden)
+			class: mapper(!state.canShowLessValues && Classes.showLessHidden, Classes.showLess)
 		}
 	},
 	values: state.values.map<FacetValueStyleState>((value) => ({
@@ -43,10 +44,13 @@ const createTransform: TransformerFactory<FacetState, FacetStyleState> = ({ mapp
 		style: {
 			container: {
 				class: mapper(
-					Classes.value,
 					value.state === 'selected' && Classes.selectedValue,
-					value.state === 'idle' && Classes.idleValue
+					value.state === 'idle' && Classes.idleValue,
+					Classes.value
 				)
+			},
+			checkbox: {
+				class: mapper(Classes.checkbox)
 			},
 			labelContainer: {
 				class: mapper(Classes.valueLabelContainer)
@@ -66,6 +70,7 @@ enum Classes {
 	loading = 'coveo-facet-container-loading',
 	title = 'coveo-facet-title',
 	value = 'coveo-facet-value',
+	checkbox = 'coveo-facet-value-checkbox',
 	showMore = 'coveo-facet-show-more',
 	showMoreHidden = 'coveo-facet-show-more-hidden',
 	showLess = 'coveo-facet-show-less',

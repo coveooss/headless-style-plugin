@@ -3,11 +3,14 @@ import {
 	StyleTransformer,
 	StyleTransformerConfig
 } from '$lib/transformers/create-style-transformers';
-import { tailwindConfig, vaporConfig } from '$lib/transformers/style-mappings';
+import { bootstrapConfig, tailwindConfig, vaporConfig } from '$lib/transformers/style-mappings';
 import { derived } from 'svelte/store';
 import { style, Styles } from '$lib/stores/style';
 
 const styles: Record<Styles, StyleTransformerConfig> = {
+	[Styles.bootstrap]: {
+		mappings: bootstrapConfig
+	},
 	[Styles.tailwind]: {
 		mappings: tailwindConfig
 	},
