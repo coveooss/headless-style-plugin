@@ -1,4 +1,4 @@
-const vercel = require('@sveltejs/adapter-vercel');
+const netlify = require('@sveltejs/adapter-netlify');
 const preprocess = require('svelte-preprocess');
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,7 +12,7 @@ module.exports = {
 	],
 
 	kit: {
-		adapter: vercel(),
+		adapter: netlify(),
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte'
 	}
