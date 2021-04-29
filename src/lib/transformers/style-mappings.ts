@@ -11,7 +11,6 @@ export const tailwindConfig: StyleMapping = {
 		'mb-4 facet box-border p-3 lg:p-0 lg:block h-screen w-screen lg:h-auto lg:w-auto fixed object-left-top bg-background top-0 left-0 lg:static z-10',
 	'coveo-facet-title':
 		'flex flex-row items-center pb-2 mb-2 border-b border-solid border-divider font-bold text-on-background-variant text-base lg:text-sm ellipsed w-full',
-	// Not sure this is the right one
 	'coveo-facet-container-loading': 'disabled',
 	'coveo-facet-show-more': 'flex flex-col items-start space-y-1 text-primary',
 	'coveo-facet-show-more-hidden': 'hidden',
@@ -35,4 +34,29 @@ export const tailwindConfig: StyleMapping = {
 	'coveo-sort-container': 'flex items-center',
 	'coveo-sort-label': 'mr-2',
 	'coveo-sort-select': 'p-2 rounded border appearance-none float-right'
+};
+
+export const vaporConfig: StyleMapping = {
+	'coveo-facet-container': 'facet',
+	'coveo-facet-title': 'facet-header facet-header-title',
+	'coveo-facet-container-loading': 'transparency-1',
+	'coveo-facet-show-more': 'ml2 btn',
+	'coveo-facet-show-more-hidden': 'hidden',
+	'coveo-facet-show-less': 'ml2 btn',
+	'coveo-facet-show-less-hidden': 'hidden',
+	'coveo-facet-value': 'cursor-pointer facet-value facet-selectable',
+	'coveo-facet-value-idle': '',
+	'coveo-facet-value-selected': '',
+	'coveo-facet-value-label-container': 'cursor-pointer inline-flex space-between mod-width-90',
+	'coveo-facet-value-label': '',
+	'coveo-facet-value-count': '',
+	'coveo-search-container': 'search-bar content-placeholder',
+	'coveo-search-button': 'search-bar-icon-container',
+	'coveo-search-input': 'search-bar-input text',
+	'coveo-search-suggestion': 'btn',
+	'coveo-search-suggestions': 'material-card mt4 p2 shadow-1 flex flex-wrap',
+	'coveo-search-suggestions-empty': '',
+	'coveo-sort-container': '',
+	'coveo-sort-label': '',
+	'coveo-sort-select': 'list-box'
 };

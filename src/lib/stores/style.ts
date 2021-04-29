@@ -2,6 +2,7 @@ import { writable } from 'svelte/store';
 
 export enum Styles {
 	tailwind = 'tailwind',
+	vapor = 'vapor',
 	rainbow = 'rainbow',
 	none = 'none'
 }

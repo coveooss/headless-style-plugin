@@ -5,28 +5,33 @@
 	import ResultList from '$lib/ResultList.svelte';
 	import Searchbox from '$lib/Searchbox.svelte';
 	import Sort from '$lib/Sort.svelte';
+	import StyleContainer from '$lib/StyleContainer.svelte';
 	import StylePicker from '$lib/StylePicker.svelte';
 </script>
 
-<StylePicker />
-<AtomicLayout>
-	<div slot="searchbox">
-		<Searchbox />
-	</div>
-	<div slot="facets">
-		<Facet field="author" name="Author" />
-		<Facet field="objecttype" name="Type" />
-	</div>
-	<div slot="sorts">
-		<Sort />
-	</div>
-	<div slot="results">
-		<ResultList />
-	</div>
-	<div slot="querysummary">
-		<QuerySummary />
-	</div>
-</AtomicLayout>
+<StyleContainer>
+	<AtomicLayout>
+		<div slot="header">
+			<StylePicker />
+		</div>
+		<div slot="searchbox">
+			<Searchbox />
+		</div>
+		<div slot="facets">
+			<Facet field="author" name="Author" />
+			<Facet field="objecttype" name="Type" />
+		</div>
+		<div slot="sorts">
+			<Sort />
+		</div>
+		<div slot="results">
+			<ResultList />
+		</div>
+		<div slot="querysummary">
+			<QuerySummary />
+		</div>
+	</AtomicLayout>
+</StyleContainer>
 
 <style>
 	:global(body) {
