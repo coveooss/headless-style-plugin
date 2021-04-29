@@ -1,7 +1,9 @@
 <div class="layout">
-	<div class="header" />
-	<div class="searchbox-container">
-		<slot name="searchbox" />
+	<div class="header">
+		<slot name="header" />
+		<div class="searchbox-container">
+			<slot name="searchbox" />
+		</div>
 	</div>
 	<div class="facet-container">
 		<slot name="facets" />
@@ -27,12 +29,15 @@
 	.header {
 		grid-column: 1 / span 4;
 		grid-row: 1 / span 3;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.searchbox-container {
 		grid-column: 3 / auto;
 		grid-row: 2 / auto;
-		max-width: 650px;
+		width: 650px;
 	}
 
 	.facet-container {

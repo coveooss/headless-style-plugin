@@ -8,7 +8,7 @@ function isString(v: unknown): v is string {
 	return typeof v === 'string';
 }
 
-type StyleTransformerConfig = {
+export type StyleTransformerConfig = {
 	mappings?: StyleMapping;
 };
 

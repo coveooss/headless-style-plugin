@@ -192,3 +192,11 @@ body {
 .coveo-facet-value:nth-child(7n+5) input {
   background-color: violet;
 }
+
+.coveo-sort-container {
+  background: -webkit-linear-gradient(left, orange, yellow, green, cyan, blue, violet);
+}
+
+.coveo-sort-select {
+  background: transparent;
+}
