@@ -14,7 +14,8 @@
 		<Searchbox />
 	</div>
 	<div slot="facets">
-		<Facet />
+		<Facet field="author" name="Author" />
+		<Facet field="objecttype" name="Type" />
 	</div>
 	<div slot="sorts">
 		<Sort />

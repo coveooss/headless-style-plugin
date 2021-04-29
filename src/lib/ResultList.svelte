@@ -1,6 +1,19 @@
 <script lang="ts">
-	import { resultListState } from './coveo/result-list';
 	import { getDefaultIconPath } from './coveo/icons/default-icon';
+	import { buildResultList } from '@coveo/headless';
+	import { searchEngine } from './coveo/search-engine';
+	import { onDestroy } from 'svelte';
+
+	const resultListController = buildResultList(searchEngine, {
+		options: {
+			fieldsToInclude: ['date']
+		}
+	});
+	let resultListState = resultListController.state;
+	const unsubscribe = resultListController.subscribe(() => {
+		resultListState = resultListController.state;
+	});
+	onDestroy(() => unsubscribe());
 
 	function formatDate(dateAsString) {
 		return new Date(dateAsString).toLocaleDateString('en-CA');
@@ -8,17 +21,21 @@
 </script>
 
 <div>
-	{#if $resultListState.results.length === 0}
-		{#if $resultListState.isLoading}
+	{#if resultListState.results.length === 0}
+		{#if resultListState.isLoading}
 			<span>Loading...</span>
 		{:else}
 			<div>No Results</div>
 		{/if}
 	{:else}
-		{#each $resultListState.results as result}
+		{#each resultListState.results as result}
 			<div class="template-container">
 				<div>
-					<img class="icon" style="background-image: url({getDefaultIconPath(result)});" />
+					<img
+						class="icon"
+						style="background-image: url({getDefaultIconPath(result)});"
+						aria-hidden
+					/>
 				</div>
 				<div class="content-container">
 					<div class="title-container">
