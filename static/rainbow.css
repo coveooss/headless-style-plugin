@@ -1,0 +1,194 @@
+body {
+  background: -webkit-linear-gradient(left, orange, yellow, green, cyan, blue, violet);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+  /* Standard syntax (must be last) */
+  font-family: Comic sans-serif;
+}
+
+/* Facet */
+
+.coveo-facet-title {
+  font-weight: bold;
+}
+
+/* SearchBox */
+
+.coveo-search-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.coveo-search-input {
+  flex: 1;
+  height: 2rem;
+  border-radius: 50px;
+  padding-left: 10px;
+  transition: all 0.3s;
+}
+
+.coveo-search-input:hover {
+  box-shadow: -4px 4px #ef3550, -8px 8px #f48fb1, -12px 12px #7e57c2, -16px 16px #2196f3, -20px 20px #26c6da, -24px 24px #43a047, -28px 28px #eeff41, -32px 32px #f9a825, -36px 36px #ff5722;
+}
+
+.coveo-search-input:focus {
+  box-shadow: -4px 4px #ef3550, -8px 8px #f48fb1, -12px 12px #7e57c2, -16px 16px #2196f3, -20px 20px #26c6da, -24px 24px #43a047, -28px 28px #eeff41, -32px 32px #f9a825, -36px 36px #ff5722;
+}
+
+.coveo-search-button {
+  padding-left: 5px;
+  flex: 0 auto;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: orange;
+}
+
+.coveo-search-button:hover {
+  animation: colorRotate 1s linear 0s infinite;
+}
+
+.coveo-search-suggestions {
+  background-color: white;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 2.5rem;
+}
+
+.coveo-search-suggestion {
+  padding: 5px;
+  transition: all 0.3s;
+}
+
+.coveo-search-suggestion:hover {
+  cursor: pointer;
+  background-color: lightgray;
+  padding-left: 20px;
+}
+
+.coveo-search-suggestion:nth-child(1) {
+  color: orange;
+}
+
+/*
+.coveo-search-suggestion:nth-child(x) {
+  color: yellow;
+}*/
+
+.coveo-search-suggestion:nth-child(2) {
+  color: green;
+}
+
+.coveo-search-suggestion:nth-child(3) {
+  color: cyan;
+}
+
+.coveo-search-suggestion:nth-child(4) {
+  color: blue;
+}
+
+.coveo-search-suggestion:nth-child(5) {
+  color: violet;
+}
+
+@keyframes colorRotate {
+  from {
+    color: orange;
+  }
+  20% {
+    color: yellow;
+  }
+  40% {
+    color: green;
+  }
+  60% {
+    color: cyan;
+  }
+  80% {
+    color: blue;
+  }
+  100% {
+    color: violet;
+  }
+}
+
+.coveo-facet-container .coveo-facet-value {
+  cursor: pointer;
+  text-shadow: 0px 0px 5px #ffffff, 0px 0px 2px #00000099;
+}
+
+.coveo-facet-container input {
+  width: 15px !important;
+  height: 15px !important;
+  margin: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: 2px solid lightblue;
+  box-shadow: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.coveo-facet-value {
+  display: flex;
+  cursor: pointer;
+}
+
+.coveo-facet-value label {
+  cursor: pointer;
+}
+
+.coveo-facet-value:nth-child(7n+0) label {
+  color: orange;
+}
+
+.coveo-facet-value:nth-child(7n+1) label {
+  color: yellow;
+}
+
+.coveo-facet-value:nth-child(7n+2) label {
+  color: green;
+}
+
+.coveo-facet-value:nth-child(7n+3) label {
+  color: cyan;
+}
+
+.coveo-facet-value:nth-child(7n+4) label {
+  color: blue;
+}
+
+.coveo-facet-value:nth-child(7n+5) label {
+  color: violet;
+}
+
+.coveo-facet-value:nth-child(7n+0) input {
+  background-color: orange;
+}
+
+.coveo-facet-value:nth-child(7n+1) input {
+  background-color: yellow;
+}
+
+.coveo-facet-value:nth-child(7n+2) input {
+  background-color: green;
+}
+
+.coveo-facet-value:nth-child(7n+3) input {
+  background-color: cyan;
+}
+
+.coveo-facet-value:nth-child(7n+4) input {
+  background-color: blue;
+}
+
+.coveo-facet-value:nth-child(7n+5) input {
+  background-color: violet;
+}
